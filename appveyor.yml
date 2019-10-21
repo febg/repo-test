@@ -1,0 +1,15 @@
+build: false
+
+environment:
+  matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+      stack: python 3
+
+install:
+  - sudo python -m pip install pytest-cov
+
+test_script:
+  - pytest --cov=./ --cov-report=xml
+  - printenv
+  - bash shell.sh
+

@@ -1,54 +1,54 @@
-# Swift-Standard
+# Python-Standard
 
-[![Build Status](https://travis-ci.org/codecov/Swift-Standard.svg?branch=master)](https://travis-ci.org/codecov/Swift-Standard) [![codecov](https://codecov.io/gh/codecov/Swift-Standard/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/Swift-Standard)
+[![Build Status](https://travis-ci.org/codecov/Python-Standard.svg?branch=master)](https://travis-ci.org/codecov/Python-Standard) [![codecov](https://codecov.io/gh/codecov/Python-Standard/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/Python-Standard)
 
-### Last Updated: 10/01/19 17:08:23
+### Last Updated: 09/05/19 18:33:51
 
 ## What is this?
 
-This is a **Swift/Xcode** application, with basic unit tests, for which coverage is uploaded to Codecov on a daily basis. It can also serve as an example for how to integrate Codecov into your Swift/Xcode project. If the build is passing for this project, then Codecov's Swift/Xcode report processing is functional and correct on codecov.io.
+This is a **Python** application, with basic unit tests, for which coverage is uploaded to Codecov on a daily basis. It can also serve as an example for how to integrate Codecov into your Python project. If the build is passing for this project, then Codecov's Python report processing is functional and correct on codecov.io.
 
 ## Configuration
 
-This application is built in `Xcode 11` and uses `Swift 5`. The UI for this application is built atop `SwiftUI`. This project includes both unit and ui tests, written with the `XCTest` framework. These tests are simulated on an `iPhone Xʀ` running `iOS 13`. Coverage reports are generated via [Slather](https://github.com/SlatherOrg/slather).
+This project is written in `Python 3.6`. Unit tests are written with the `pytest` framework and coverage reports are generated using the `pytest-cov` plugin.
 
-Unit tests: `/standard-swiftTests/Test_Index.swift`
+Unit tests: `/test_index.py`
 
-UI tests:
-`/standard-swiftUITests/Test_Index_UI.swift`
-
-Slather configuration (.slather.yml):
-```yaml
-coverage_service: cobertura_xml
-xcodeproj: ./standard-swift.xcodeproj
-scheme: standard-swift
-output_directory: ./
-```
-Travis configuration (.travis.yml):
+Inside `.travis.yml` file:
 ```yaml
 install:
-  - gem install slather
+  - pip install codecov
+  - pip install pytest-cov
 script:
-  - xcodebuild -scheme standard-swift -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone Xʀ,OS=13.0' build test
-  - slather 
-  - bash <(curl -s https://codecov.io/bash) -f ./cobertura.xml
+  - pytest --cov=./ --cov-report=xml
+  - codecov
 ```
 
-## Processing Coverage Reports
+## Usage
 
-By default, coverage reports are not generated for Xcode builds. To make sure your Xcode scheme generates coverage reports click on your scheme --> "Edit Scheme" --> "Test" --> check "Gather coverage." Now, coverage reports will automatically be generated for each build.
+Run unit tests inside a Docker container
+```bash
+docker-compose up
+```
 
-## Errors Processing `.xccoverage` Files
+Generate coverage reports via `pytest`
+```bash
+pytest --cov=./ --cov-report=xml
+```
 
-Xcode generates special `.xccoverage` files which hold coverage information for each build. These files are **not** human readable and Codecov may run into errors while parsing these files. To get the relevant information out of these files after your build, it is recommended you use a tool like [Slather](https://github.com/SlatherOrg/slather) or [Xcov](https://github.com/nakiostudio/xcov) to generate a `coverage.xml` file that can then be uploaded to Codecov.
+Uploading reports to Codecov
+```bash
+bash <(curl https://codecov.io/bash)
 
-## Coverage Inflation
+OR
 
-All Xcode projects include separate folders for unit tests and ui tests. In some instances, the files in these folders may arbitrarily inflate the overall coverage percentage reported by Codecov because they are automatically lumped together as a part of the coverage report. If you don't want to include these files, we recommend you use Slather as a part of your workflow to generate coverage reports as it will discard unit/ui test folders from your coverage report. Otherwise, you can choose to exclude these folders via your `.codecov.yml` through [ignore paths](https://docs.codecov.io/docs/ignoring-paths).
+pip install codecov
+codecov
+```
 
 ## Reporting Issues
 
-If you've discovered an issue with this repository or with Swift processing in general, it is recommended to email support@codecov.io rather than post an issue here. This repository will not be checked regularly for open issues.
+If you've discovered an issue with this repository or with Python processing in general, it is recommended to email support@codecov.io rather than post an issue here. This repository will not be checked regularly for open issues.
 
 ## Contributing
 

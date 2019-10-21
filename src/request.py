@@ -6,7 +6,7 @@ import os
 
 payload = {'token': os.environ['API_KEY']}
 
-link = 'https://codecov.io/api/gh/codecov/Swift-Standard'
+link = 'https://codecov.io/api/gh/codecov/Python-Standard'
 
 print("Waiting 60 seconds for report to upload before pinging API...")
 
@@ -20,7 +20,7 @@ commit_data = all_data['commits'][0]
 coverage_percentage = commit_data['totals']['c']
 
 print("Ensuring coverage percentage is accurate...")
-#result should return 82.35294  as its coverage metric
+#result should return 85.71429 as its coverage metric
 if(coverage_percentage == os.environ['CORRECT_COVERAGE']): 
     print("Success! Codecov's API returned the correct coverage percentage, "+ os.environ['CORRECT_COVERAGE'])
     exit(0)
