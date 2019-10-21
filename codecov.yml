@@ -1,0 +1,4 @@
+ignore:
+  - "standard-swift/AppDelegate.swift"
+  - "standard-swift/ContentView.swift"
+  - "standard-swift/SceneDelegate.swift"
