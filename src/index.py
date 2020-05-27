@@ -4,7 +4,6 @@ def uncovered_if(var=True):
     else:
       return True
 
-
 def fully_covered():
     # Added a change here
     return True
