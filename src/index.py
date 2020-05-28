@@ -12,3 +12,7 @@ def fully_covered():
 def uncovered():
     return True
 
+def new_func():
+    a = 1
+    b = 1+1
+    return True
