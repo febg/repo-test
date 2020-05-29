@@ -9,6 +9,9 @@ def fully_covered():
     # Added a change here
     return True
 
+def new_new():
+    return False
+
 def uncovered():
     return True
 
