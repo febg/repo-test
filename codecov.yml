@@ -1,24 +1,10 @@
 coverage:
     status:
       project:
-        default:
-          # basic
-          target: 0
-          threshold: 0
-          base: auto
+        true
           # advanced
       patch:
-        default:
-          # basic
-          target: 0
-          threshold: 0
-          base: auto
+        true
 
-      patch:
-        default:
-          # basic
-          target: 0
-          threshold: 0
-          base: auto
-      notify:
-        require_ci_to_pass: no
+      changes:
+        true
