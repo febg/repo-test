@@ -1,0 +1,10 @@
+coverage:
+    status:
+      project:
+        true
+          # advanced
+      patch:
+        true
+
+      changes:
+        true
