@@ -1,10 +1,19 @@
 coverage:
     status:
       project:
-        true
-          # advanced
+        default: on
+        flag_1:
+            flags:
+                - flag_1
       patch:
-        true
-
+        flag_1:
+            flags:
+                - flag_1
       changes:
         true
+
+flags:
+    flag_1:
+        carryforward: false
+    flag_2:
+        carryforward: false
