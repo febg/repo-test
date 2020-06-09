@@ -6,6 +6,7 @@ coverage:
             flags:
                 - flag_1
       patch:
+        default: on
         flag_1:
             flags:
                 - flag_1
