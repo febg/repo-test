@@ -5,11 +5,17 @@ coverage:
         flag_1:
             flags:
                 - flag_1
+        flag_2:
+            flags:
+                - flag_2
       patch:
         default: on
         flag_1:
             flags:
                 - flag_1
+        flag_2:
+            flags:
+                - flag_2
       changes:
         true
 
