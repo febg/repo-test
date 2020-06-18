@@ -5,12 +5,12 @@
 trigger:
     - master
     
-    jobs:
-    
-        - job: 'Test'
+jobs:
+
+    - job: 'Test'
         pool:
             vmImage: 'Ubuntu-16.04'
-        
+    
         steps:
         - task: UsePythonVersion@0
             inputs:
@@ -19,7 +19,7 @@ trigger:
         
         - script: python -m pip install --upgrade pip && pip install -r requirements.txt
             displayName: 'Install dependencies'
-        
+    
         - script: |
             pip install pytest 
             pip install pytest-cov
@@ -30,7 +30,7 @@ trigger:
             testResultsFiles: '**/test-results.xml'
             testRunTitle: 'Python $(python.version)'
             condition: succeededOrFailed()
-        
+    
         - script: |
             bash <(curl https://codecov.io/bash) 
             env:
