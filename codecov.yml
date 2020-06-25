@@ -9,4 +9,4 @@ coverage:
       changes:
         true
 
-github_checks: false
+github_checks: true
