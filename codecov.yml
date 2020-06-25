@@ -9,5 +9,4 @@ coverage:
       changes:
         true
 
-github_checks:
-    annotations: false
+github_checks: true
