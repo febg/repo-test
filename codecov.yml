@@ -8,3 +8,6 @@ coverage:
 
       changes:
         true
+
+github_checks:
+    annotations: false
