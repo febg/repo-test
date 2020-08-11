@@ -1,0 +1,13 @@
+coverage:
+    status:
+      project:
+        true
+          # advanced
+      patch:
+        true
+
+      changes:
+        true
+
+github_checks:
+    annotations: true
