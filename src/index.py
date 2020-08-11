@@ -144,3 +144,129 @@ def new_func6():
     a = 1
     b = 1+1
     return True
+
+def uncovered_if7(var=True):
+    if var:
+      return False
+    else:
+      return True
+
+def fully_covered7():
+    # Added a change here
+    return True
+
+def new_new7():
+    return False
+
+def uncovered7():
+    return True
+
+def new_func7():
+    a = 1
+    b = 1+1
+    return True
+
+def uncovered_if8(var=True):
+    if var:
+      return False
+    else:
+      return True
+
+def fully_covered8():
+    # Added a change here
+    return True
+
+def new_new8():
+    return False
+
+def uncovered8():
+    return True
+
+def new_func8():
+    a = 1
+    b = 1+1
+    return True
+
+def uncovered_if9(var=True):
+    if var:
+      return False
+    else:
+      return True
+
+def fully_covered9():
+    # Added a change here
+    return True
+
+def new_new9():
+    return False
+
+def uncovered9():
+    return True
+
+def new_func9():
+    a = 1
+    b = 1+1
+    return True
+
+def uncovered_if11(var=True):
+    if var:
+      return False
+    else:
+      return True
+
+def fully_covered11():
+    # Added a change here
+    return True
+
+def new_new11():
+    return False
+
+def uncovered11():
+    return True
+
+def new_func11():
+    a = 1
+    b = 1+1
+    return True
+
+def uncovered_if12(var=True):
+    if var:
+      return False
+    else:
+      return True
+
+def fully_covered12():
+    # Added a change here
+    return True
+
+def new_new12():
+    return False
+
+def uncovered12():
+    return True
+
+def new_func12():
+    a = 1
+    b = 1+1
+    return True
+
+def uncovered_if13(var=True):
+    if var:
+      return False
+    else:
+      return True
+
+def fully_covered13():
+    # Added a change here
+    return True
+
+def new_new13():
+    return False
+
+def uncovered13():
+    return True
+
+def new_func13():
+    a = 1
+    b = 1+1
+    return True
