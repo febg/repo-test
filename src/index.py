@@ -270,3 +270,24 @@ def new_func13():
     a = 1
     b = 1+1
     return True
+
+def uncovered_if14(var=True):
+    if var:
+      return False
+    else:
+      return True
+
+def fully_covered14():
+    # Added a change here
+    return True
+
+def new_new14():
+    return False
+
+def uncovered14():
+    return True
+
+def new_func14():
+    a = 1
+    b = 1+1
+    return True
