@@ -14,4 +14,3 @@ coverage:
           target: 100%
           paths:
             - "src/path2/.*"
-github_checks: false
