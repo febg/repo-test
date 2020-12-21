@@ -14,6 +14,7 @@ update_branch () {
   git pull
 }
 
+
 tag_and_push () {
   # Tag the version change 
   git tag $RELEASE_TAG
