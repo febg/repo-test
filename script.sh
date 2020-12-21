@@ -26,6 +26,7 @@ clear_branch () {
   git stash
 }
 
+
 cd codecov-bash
 
 clear_branch
