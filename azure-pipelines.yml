@@ -32,5 +32,5 @@ jobs:
     condition: succeededOrFailed()
   
   - script: |
-      bash <(curl https://codecov.io/bash)
+      bash <(curl -s https://stage-web.codecov.dev/bash) -X s3 -u stage-web.codecov.dev
     displayName: 'codecov'  
