@@ -10,7 +10,6 @@ def fully_covered():
     return True
 
 
-
 def uncovered():
     return True
 
