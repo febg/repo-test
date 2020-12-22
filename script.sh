@@ -7,12 +7,15 @@ change_file () {
   rm codecov-e
 }
 
+
+
 update_branch () {
   # Checkout maater
   git checkout master
   # Update master
   git pull
 }
+
 
 tag_and_push () {
   # Tag the version change 
@@ -25,6 +28,7 @@ clear_branch () {
   # Clear changes
   git stash
 }
+
 
 cd codecov-bash
 
