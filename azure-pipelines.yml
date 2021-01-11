@@ -31,6 +31,6 @@ jobs:
       testRunTitle: 'Python $(python.version)'
     condition: succeededOrFailed()
   
-  - script: |
-      bash <(curl -s https://stage-web.codecov.dev/bash) -X s3 -u stage-web.codecov.dev
-    displayName: 'codecov'  
+  # - script: |
+  #     # bash <(curl -s https://stage-web.codecov.dev/bash) -X s3 -u stage-web.codecov.dev
+  #   displayName: 'codecov'  
