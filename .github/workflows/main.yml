@@ -25,10 +25,10 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install coverage
       run: |
-        pip install coverage
+        pip install pytest-cov
     - name: Run tests and collect coverage
       run: |
-        coverage run tests.py
+        pytest --cov=./ --cov-report=xml
     - name: Upload coverage reports to Codecov with bash script
       run: |
         bash <(curl -s https://stage-web.codecov.dev/bash) -X s3 -u stage-web.codecov.dev
