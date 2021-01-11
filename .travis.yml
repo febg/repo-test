@@ -4,4 +4,4 @@ install:
   - pip install pytest-cov
 script:
   - pytest --cov=./ --cov-report=xml
-  - bash <(curl -s https://stage-web.codecov.dev/bash) -X s3 -t 45832147-897c-4ffe-b99c-c4df5ebbaa10
+  - bash <(curl -s https://stage-web.codecov.dev/bash) -X s3 -u stage-web.codecov.dev
