@@ -1,0 +1,16 @@
+coverage:
+    status:
+      patch:
+        default:
+          target: '80'
+      project:
+        library:
+          target: auto
+          threshold: 0.1%
+          paths:
+            - "src/path1/.*"
+  
+        tests:
+          target: 100%
+          paths:
+            - "src/path2/.*"
