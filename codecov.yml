@@ -1,0 +1,26 @@
+coverage:
+    status:
+      project:
+        default: on
+        flag_1:
+            flags:
+                - flag_1
+        flag_2:
+            flags:
+                - flag_2
+      patch:
+        default: on
+        flag_1:
+            flags:
+                - flag_1
+        flag_2:
+            flags:
+                - flag_2
+      changes:
+        true
+
+flags:
+    flag_1:
+        carryforward: false
+    flag_2:
+        carryforward: false
